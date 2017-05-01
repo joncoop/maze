@@ -60,22 +60,17 @@ while not done:
             done = True
 
     pressed = pygame.key.get_pressed()
-
-    up = pressed[pygame.K_UP]
-    down = pressed[pygame.K_DOWN]
-    left = pressed[pygame.K_LEFT]
-    right = pressed[pygame.K_RIGHT]
-
-    if up:
+    
+    if pressed[pygame.K_UP]:
         player_vy = -player_speed
-    elif down:
+    elif pressed[pygame.K_DOWN]:
         player_vy = player_speed
     else:
         player_vy = 0
         
-    if left:
+    if pressed[pygame.K_LEFT]:
         player_vx = -player_speed
-    elif right:
+    elif pressed[pygame.K_RIGHT]:
         player_vx = player_speed
     else:
         player_vx = 0
